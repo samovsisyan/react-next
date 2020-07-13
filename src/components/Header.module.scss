@@ -1,0 +1,91 @@
+@import '../styles/base/variables';
+
+@import '../styles/base/mixins';
+
+/*******************************************************************************
+*** HEADER
+*******************************************************************************/
+.appHeader {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    padding: $space * 2 $space * 6;
+
+    &.dark {
+        a {
+            color: #f9f9f9;
+        }
+
+        button {
+            color: #f9f9f9;
+        }
+    }
+
+    &.light {
+        img.logo {
+            filter: brightness(0);
+        }
+    }
+}
+
+.nav {
+    ul {
+        display: flex;
+    }
+
+    li {
+        &:not(:last-child) {
+            margin-right: 31px;
+        }
+    }
+
+    a {
+        font-family: $font-nav;
+        font-size: 9px;
+        font-weight: bold;
+
+        letter-spacing: 2.2px;
+        text-transform: uppercase;
+
+        color: $color-text;
+
+        span {
+            transition: opacity .3s ease-in-out;
+
+            opacity: .4;
+        }
+
+        &.active {
+            span {
+                opacity: 1;
+            }
+        }
+
+        &:hover {
+            span {
+                opacity: 1;
+            }
+        }
+    }
+
+    button {
+        font-size: 11px;
+
+        width: 111px;
+
+        letter-spacing: 2.2px;
+
+        opacity: 1;
+        color: $color-blue;
+
+        &:hover {
+            color: #f9f9f9;
+        }
+    }
+}

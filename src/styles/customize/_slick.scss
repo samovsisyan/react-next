@@ -1,0 +1,51 @@
+.home-slider {
+    .slick-track {
+        display: flex !important;
+    }
+
+    .slick-slide {
+        height: inherit !important;
+
+        transform: translateX(50%);
+
+        & > div {
+            height: 100%;
+        }
+    }
+
+    .slick-arrow {
+        font-size: 0;
+
+        position: absolute;
+        z-index: 2;
+        top: 0;
+
+        width: 41px;
+        height: 41px;
+        margin-top: 0;
+        padding: 0;
+
+        transition: background-color .3s ease-in-out;
+
+        border: 0;
+        border-radius: 100%;
+        outline: 0;
+        background: #fff;
+
+        &.slick-prev {
+            left: 0;
+        }
+
+        &.slick-next {
+            left: 56px;
+        }
+
+        &:hover {
+            background: $color-blue;
+        }
+    }
+
+    .slick-list {
+        padding-top: 67px;
+    }
+}

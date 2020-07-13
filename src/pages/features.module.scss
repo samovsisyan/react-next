@@ -1,0 +1,86 @@
+@import '../styles/base/variables';
+
+@import '../styles/base/mixins';
+
+/*******************************************************************************
+*** FEATURES - HERO
+*******************************************************************************/
+section.hero {
+  display: flex;
+  align-items: center;
+
+  min-height: 100vh;
+
+  color: #fff;
+  background: url(../assets/images/features-header.jpg) center / cover no-repeat;
+
+  h1 {
+    max-width: 304px;
+    margin-bottom: 25px;
+  }
+
+  p {
+    font-size: 12px;
+    line-height: 2.08;
+
+    max-width: 304px;
+
+    letter-spacing: .1px;
+  }
+}
+
+/*******************************************************************************
+*** FEATURES - FEATURES
+*******************************************************************************/
+.featuresGrid {
+  display: grid;
+  grid-template-columns: calc(50% + 3rem) calc(50% - 3rem);
+
+  max-width: 100vw;
+}
+
+/*******************************************************************************
+*** FEATURES - BENEFITS
+*******************************************************************************/
+.benefits {
+  padding-right: $space * 4;
+
+  background-image: radial-gradient(circle at 50% 0, #f2f3f7, #e1e3eb 35%);
+
+  h1 {
+    margin-bottom: 35px;
+
+    text-align: center;
+
+    color: rgba(36, 40, 53, .51);
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    max-width: 1210px;
+    margin: 0 auto;
+  }
+
+  li {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: normal;
+    line-height: 3;
+
+    margin: 0 22px;
+
+    transition: opacity .3s ease-in-out;
+    letter-spacing: -.91px;
+
+    opacity: .3;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+

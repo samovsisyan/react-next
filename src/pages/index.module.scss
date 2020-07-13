@@ -1,0 +1,252 @@
+@import '../styles/base/variables';
+
+@import '../styles/base/mixins';
+
+/*******************************************************************************
+*** HOME PAGE - HERO
+*******************************************************************************/
+.lottie {
+  width: 1920px;
+
+  transform: scale(.5);
+  transform-origin: left top;
+
+  border: 1px solid white;
+}
+
+section.hero {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+
+  min-height: 100vh;
+
+  color: #fff;
+  background: url(../assets/images/home-hero.jpg) center / cover no-repeat;
+  background-color: $color-text;
+
+  .content {
+    margin-top: 131px;
+
+    ul {
+      margin-bottom: 27px;
+    }
+
+    li {
+      line-height: 1.56;
+
+      display: flex;
+      align-items: center;
+
+      letter-spacing: .1px;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  h1 {
+    max-width: 342px;
+    margin-bottom: 28px;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  li {
+    img {
+      width: 20px;
+      height: 19px;
+      object-fit: contain;
+      margin-right: 11px;
+    }
+  }
+
+  .buttonWrapper {
+    button {
+      font-size: 9px;
+
+      width: 122px;
+
+      &:not(:last-child) {
+        margin-right: 19px;
+      }
+
+      img {
+        margin-left: 7px;
+      }
+    }
+  }
+}
+
+.heroBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: $space * 2;
+
+  .social {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+
+    width: 16px;
+
+    &::after {
+      display: block;
+
+      width: 1px;
+      height: 66px;
+
+      content: '';
+
+      opacity: .2;
+      background: #f9f9f9;
+    }
+
+    li {
+      margin-bottom: 22px;
+    }
+  }
+
+  a {
+    color: rgba(#fff, .2);
+
+    &:hover, &:focus, &:active {
+      color: #fff;
+    }
+  }
+
+  .process {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+
+    min-height: 112px;
+    margin-left: 230px;
+    padding: 20px 60px;
+
+    list-style-position: inside;
+
+    background-image: linear-gradient(to left, #2f2b35, #151318 0%);
+
+    li {
+      font-size: 17px;
+      font-weight: bold;
+
+      display: flex;
+      align-items: center;
+
+      color: rgba(#f9f9f9, .6);
+
+      &:not(:last-child) {
+        &::after {
+          display: inline-block;
+          // width: 89px;
+
+          width: 5vw;
+          height: 1px;
+          margin: 0 28px;
+
+          content: '';
+
+          background: rgba(#f9f9f9, .82);
+        }
+      }
+    }
+  }
+}
+
+/*******************************************************************************
+*** HOME PAGE - FEATURES
+*******************************************************************************/
+section.features {
+  position: relative;
+
+  padding-bottom: 0;
+
+  background-color: #e1e3eb;
+
+  .content {
+    display: flex;
+
+    p {
+      font-size: 13px;
+      line-height: 1.77;
+
+      max-width: 342px;
+      margin-top: 46px;
+    }
+  }
+
+  h1 {
+    max-width: 303px;
+    margin-right: 90px;
+
+    &::before {
+      display: block;
+
+      width: 95%;
+      height: 1px;
+      margin-bottom: 40px;
+
+      content: '';
+
+      background: $color-text;
+    }
+  }
+
+  button {
+    width: 215px;
+    margin-top: 19px;
+
+    letter-spacing: 2.2px;
+  }
+
+  .slider {
+    z-index: 2;
+  }
+}
+
+/*******************************************************************************
+*** HOME PAGE - HOW
+*******************************************************************************/
+section.how {
+  position: relative;
+  // min-height: 100vw;
+
+  min-height: 1132px;
+  margin-top: -$space * 6;
+  padding-top: $space * 9;
+
+  color: #fff;
+  background: url(../assets/images/home-how.jpg) center bottom / 100vw no-repeat;
+  background-color: $color-text;
+
+  h1 {
+    line-height: 1.6;
+
+    max-width: 331px;
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.77;
+
+    max-width: 437px;
+  }
+
+  button {
+    width: 190px;
+    margin-top: 26px;
+
+    letter-spacing: 2.2px;
+
+    border-width: 2px;
+  }
+}

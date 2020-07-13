@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    max-width: 100%;
+
+    user-select: none;
+}
+
+html, body {
+    overflow-x: hidden;
+
+    width: 100vw;
+}
+
+body {
+    font-family: $font-default;
+    font-size: 13px;
+    line-height: 1.75;
+
+    color: $color-text;
+
+    @include desktop {
+        font-size: 16px;
+    }
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+    line-height: normal;
+
+    letter-spacing: -1px;
+}
+
+h1 {
+    font-size: 34px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+a {
+    cursor: pointer;
+    transition: color .3s ease-in-out;
+
+    &, &:hover {
+        text-decoration: none;
+    }
+}
+
+.app-container {
+    position: relative;
+
+    overflow-x: hidden;
+
+    width: 100vw;
+    height: 100vh;
+
+    @include desktop {
+        @include scrollbar(6px, #e1e3eb, $color-text);
+    }
+}
+
+.container {
+    padding: $space * 2 $space;
+
+    @include desktop {
+        padding: $space * 3 0 $space * 3 $space * 6;
+    }
+}
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+button.btn {
+    font-family: $font-nav;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: normal;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 35px;
+
+    cursor: pointer;
+    user-select: none;
+    transition: all .3s ease-in-out;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    background: transparent;
+
+    &.primary {
+        color: #e1e3eb;
+        background-color: $color-blue;
+
+        &:hover, &:active, &:focus {
+            background-color: darken($color-blue, 10);
+        }
+    }
+
+    &.light {
+        color: #242835;
+        background-color: #eee;
+
+        &:hover, &:active, &:focus {
+            background-color: darken(#eee, 10);
+        }
+    }
+
+    &.outline-light {
+        color: #e1e3eb;
+        border: 1px solid  #e1e3eb;
+        background-color: transparent;
+
+        &:hover, &:active, &:focus {
+            color: $color-text;
+            border-color: #e1e3eb;
+            background-color: #e1e3eb;
+        }
+    }
+
+    &.outline-primary {
+        border: 2px solid $color-blue;
+        background-color: transparent;
+
+        &:hover, &:active, &:focus {
+            background-color: $color-blue;
+        }
+    }
+
+    &.outline-secondary {
+        color: #0f0f11;
+        border: 2px solid #0f0f11;
+        background-color: transparent;
+
+        &:hover, &:active, &:focus {
+            color: #fff;
+            background-color: #0f0f11;
+        }
+    }
+}

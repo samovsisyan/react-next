@@ -1,0 +1,164 @@
+@import '../styles/base/variables';
+
+@import '../styles/base/mixins';
+
+/*******************************************************************************
+*** HOW - HEADER
+*******************************************************************************/
+.header {
+  padding-right: $space * 6;
+
+  background-image: radial-gradient(circle at 50% 0, #f2f3f7, #e1e3eb 47%);
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 131px;
+  }
+
+  .steps {
+    flex-grow: 1;
+    justify-content: space-between;
+
+    max-width: 45vw;
+  }
+
+  .step {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: $space * 4;
+    }
+
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: -19px;
+
+      display: block;
+
+      width: 1px;
+      height: 124px;
+
+      content: '';
+
+      background: $color-blue;
+    }
+
+    span {
+      margin-bottom: 2px;
+    }
+
+    h2 {
+      font-size: 24px;
+      font-weight: normal;
+
+      margin-bottom: 37px;
+
+      color: rgba(#242835, .8);
+    }
+  }
+}
+
+.steps {
+  display: flex;
+}
+
+.step {
+  & > span {
+    font-size: 100px;
+    font-weight: bold;
+    line-height: normal;
+
+    color: #242835;
+  }
+
+  h2 {
+    display: flex;
+    flex-flow: column;
+  }
+}
+
+.stepSection {
+  display: flex;
+
+  min-height: 38vw;
+
+  & > div {
+    flex-basis: 50%;
+  }
+
+  &:nth-of-type(3) {
+    .text {
+      color: #fafafa;
+      background: $color-text;
+
+      span {
+        color: #fafafa;
+      }
+    }
+  }
+
+  .img {
+    position: relative;
+
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 3fr 2fr;
+
+    max-width: 50vw;
+    max-height: 100%;
+  }
+
+  img {
+    width: 100%;
+    max-width: 100%;
+    height: 50%;
+    max-height: 100%;
+    object-fit: cover;
+
+    &:first-child {
+      grid-column: 1 / 2;
+      grid-row: 1 / 3;
+
+      height: 100%;
+    }
+
+    &:last-child {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+    }
+  }
+
+  .text {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+
+    padding: $space * 4;
+  }
+
+  .step {
+    display: flex;
+    align-items: center;
+
+    span {
+      margin-right: 25px;
+    }
+  }
+
+  h2 {
+    font-size: 34px;
+    font-weight: normal;
+  }
+
+  p {
+    font-size: 12px;
+    line-height: 2.08;
+
+    max-width: 360px;
+
+    letter-spacing: .1px;
+  }
+}
